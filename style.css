@@ -1,0 +1,118 @@
+/********** Fonts **********/
+.font-dot{
+    font-family: 'DotGothic16', sans-serif;
+}
+
+/********** colors **********/
+.bg-darkgray{
+    background: #393e46;
+}
+
+.bg-gray{
+    background: #5c636e;
+}
+
+.bg-offwhite{
+    background: #f7f7f7!important;
+}
+
+.bg-orange{
+    background: #f8b500!important;
+}
+
+.text-gray{
+    color: #757575;
+}
+
+.text-offwhite{
+    color: #BDBDBD!important;
+}
+
+.text-orange{
+    color: #f8b500!important;
+}
+
+.bd-orange{
+    border: 1px solid #f8b500!important;
+}
+
+/******** All contents ********/
+html{
+    background: #5c636e;
+}
+
+article{
+    max-width: 1200px!important;
+}
+
+.hover:hover{
+    cursor: pointer;
+    transform: translate(0, -2px);
+}
+
+.input-box{
+    background: #f7f7f77c!important;
+}
+
+/********** Top page **********/
+.top-btn:hover:before{
+    content: "▶";
+}
+
+/********** Main page **********/
+.icon{
+    max-width: 50px;
+    min-width: 50px;
+}
+
+.burger{
+    max-width: 280px;
+    cursor: pointer;
+}
+
+.menu{
+    max-height: 400px;
+    overflow-y: scroll;
+    white-space: nowrap;
+    box-shadow: 0 1px 10px #2b2f35a8;
+}
+
+.menu::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.menu::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #5c636e;
+}
+
+.menu::-webkit-scrollbar-track{
+    border-radius: 5px;
+    background-color: #757575;
+}
+
+.menu-btn{
+    max-height: 95px;
+    margin-top: 5px;
+    border-bottom: 2px solid #5c636e3b;
+}
+
+.description{
+    max-height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    text-shadow:1px 1px 3px #393e469a, 
+                1px 1px 3px #393e469a, 
+                1px 1px 3px #393e469a, 
+                1px 1px 3px #393e469a;
+}
+
+@media (max-width: 576px){
+
+    /* jsで非表示ではなく削除したい */
+    .info{
+        display: none;
+    }
+}
