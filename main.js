@@ -63,86 +63,87 @@ class User{
     // 初期値設定
     static initializedItems(){
 
-        let items = {
+        const initialItems = {
             "Flip Machine": new Item(
-                                "Flip Machine", "ability",
-                                "flip-machine",
-                                15000, 0, 25,
-                                "You get 25 dollar for each click on the grill.",
-                                0, 500
-                            ),
+                "Flip Machine", "ability",
+                "flip-machine",
+                15000, 0, 25,
+                "You get 25 dollar for each click on the grill.",
+                0, 500
+                ),
             "ETF Stock": new Item(
-                                "ETF Stock", "investment",
-                                "etf-stock",
-                                300000, 0, 0.1,
-                                "Purchases of ETF stocks are added <br> together and 0.1% per second is obtained.",
-                                0, -1
-                            ),
+                "ETF Stock", "investment",
+                "etf-stock",
+                300000, 0, 0.1,
+                "Purchases of ETF stocks are added <br> together and 0.1% per second is obtained.",
+                0, -1
+                ),
             "ETF Bonds": new Item(
-                                "ETF Bonds", "investment",
-                                "etf-bonds",
-                                300000, 0, 0.07,
-                                "Add the bond ETF purchases <br> together and get 0.07% per second.",
-                                0, -1
-                            ),
+                "ETF Bonds", "investment",
+                "etf-bonds",
+                300000, 0, 0.07,
+                "Add the bond ETF purchases <br> together and get 0.07% per second.",
+                0, -1
+                ),
             "Lemonade Stand": new Item(
-                                "Lemonade Stand", "realEstate",
-                                "lemonade-stand",
-                                30000, 0, 30,
-                                "Get 30 dollar per second.",
-                                0, 1000
-                            ),
+                "Lemonade Stand", "realEstate",
+                "lemonade-stand",
+                30000, 0, 30,
+                "Get 30 dollar per second.",
+                0, 1000
+                ),
             "Ice Cream Truck": new Item(
-                                "Ice Cream Truck", "realEstate",
-                                "ice-crem-truck",
-                                100000, 0, 120,
-                                "Get 30 dollar per second.",
-                                0, 500
-                            ),
+                "Ice Cream Truck", "realEstate",
+                "ice-crem-truck",
+                100000, 0, 120,
+                "Get 30 dollar per second.",
+                0, 500
+                ),
             "House": new Item(
-                                "House", "realEstate",
-                                "house",
-                                20000000, 0, 32000,
-                                "Get 32,000 dollar per second.",
-                                0, 100
-                            ),
-            "TownHouse": new Item("TownHouse", "realEstate",
-                                "townhouse",
-                                40000000, 0, 64000,
-                                "Get 64,000 dollar per second.",
-                                0, 100
-                            ),
+                "House", "realEstate",
+                "house",
+                20000000, 0, 32000,
+                "Get 32,000 dollar per second.",
+                0, 100
+                ),
+            "TownHouse": new Item(
+                "TownHouse", "realEstate",
+                "townhouse",
+                40000000, 0, 64000,
+                "Get 64,000 dollar per second.",
+                0, 100
+                ),
             "Mansion": new Item(
-                                "Mansion", "realEstate",
-                                "mansion",
-                                250000000, 0, 500000,
-                                "Get 500,000 dollar per second.",
-                                0, 20
-                            ),
+                "Mansion", "realEstate",
+                "mansion",
+                250000000, 0, 500000,
+                "Get 500,000 dollar per second.",
+                0, 20
+                ),
             "Industrial Space": new Item(
-                                "Industrial Space", "realEstate",
-                                "inductrial-space",
-                                1000000000, 0, 2200000,
-                                "Get 2,200,000 dollar per second.",
-                                0, 10
-                            ),
+                "Industrial Space", "realEstate",
+                "inductrial-space",
+                1000000000, 0, 2200000,
+                "Get 2,200,000 dollar per second.",
+                0, 10
+                ),
             "Hotel Skyscraper": new Item(
-                                "Hotel Skyscraper", "realEstate",
-                                "hotel",
-                                10000000000, 0, 25000000,
-                                "Get 25,000,000 dollar per second.",
-                                0, 5
-                            ),
+                "Hotel Skyscraper", "realEstate",
+                "hotel",
+                10000000000, 0, 25000000,
+                "Get 25,000,000 dollar per second.",
+                0, 5
+                ),
             "Bullet-Speed Sky Railway": new Item(
-                                "Bullet-Speed Sky Railway", "realEstate",
-                                "bullet-speed-sky-rallway",
-                                10000000000000, 0, 30000000000,
-                                "Get 30,000,000,000 dollar per second.",
-                                0, 1
-                            ),
+                "Bullet-Speed Sky Railway", "realEstate",
+                "bullet-speed-sky-rallway",
+                10000000000000, 0, 30000000000,
+                "Get 30,000,000,000 dollar per second.",
+                0, 1
+                ),
         };
 
-        return items;
+        return initialItems;
     }
 
     increaseDays(){
@@ -254,9 +255,25 @@ class Control{
                 let userData = localStorage.getItem("userData");
                 userData = JSON.parse(userData);
 
+                let purchasedItems = {};
+                Object.keys(userData.purchasedItems).forEach(key => {
+                    let item = userData.purchasedItems[key];
+                    purchasedItems[key] = new Item(
+                        item.name,
+                        item.type,
+                        item.imageUrl,
+                        item.price,
+                        item.totalPrice,
+                        item.effect,
+                        item.description,
+                        item.count,
+                        item.maxCount
+                    );
+                })
+
                 let user = new User(userData.name, userData.age, 
                                     userData.days, userData.money, 
-                                    userData.burger, userData.purchasedItems);
+                                    userData.burger, purchasedItems);
 
                 Control.displayMainPage(user);
                 Control.setTimeInterval(user);
