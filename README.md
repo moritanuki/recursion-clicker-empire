@@ -8,7 +8,7 @@ Computer Science学習プラットフォーム [*Recursion*](https://recursionis
  
 ***DEMO:***
  
-![Demo](https://raw.github.com/wiki/moritanuki/recursion-clicker-empire-game/images/clicker-empire-game_demo.gif)
+![Demo](https://raw.github.com/wiki/moritanuki/recursion-clicker-empire/images/clicker-empire-game_demo.gif)
  
 ## Features
  
@@ -22,12 +22,12 @@ Computer Science学習プラットフォーム [*Recursion*](https://recursionis
  
 ## Usage
  
-1. [Clicker Empire Game](https://moritanuki.github.io/recursion-clicker-empire-game/)にアクセス
+1. [Clicker Empire Game](https://moritanuki.github.io/recursion-clicker-empire/)にアクセス
  
 ## Installation
  
 ```
-$ git clone https://github.com/moritanuki/recursion-clicker-empire-game.git
+$ git clone https://github.com/moritanuki/recursion-clicker-empire.git
 $ cd recursion-clicker-empire-game/
 ```
  
