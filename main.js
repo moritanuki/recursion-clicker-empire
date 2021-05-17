@@ -380,9 +380,9 @@ class Control{
                     Control.rewriteUserInfo(User);
                 }
                 else{
-                    let shortage = (purchasePrice - User.money).toLocaleString();
-    
-                    alert(`${User.name} is $${shortage} short on cash.`);
+                    let shortage = purchasePrice - User.money;
+                    
+                    alert(`${User.name} is $${shortage.toLocaleString()} short on cash.`);
                 }
             }
         })
