@@ -381,7 +381,9 @@ class Control{
                 }
                 else{
                     let shortage = purchasePrice - User.money;
-                    
+                    console.log(purchasePrice);
+                    console.log(User.money);
+                    console.log(shortage);
                     alert(`${User.name} is $${shortage.toLocaleString()} short on cash.`);
                 }
             }
