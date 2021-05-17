@@ -579,6 +579,7 @@ class View{
             let item = User.purchasedItems[key];
             let effectString = Control.getEffectString(item);
             let maxCountString = Control.getMaxCountString(User, item);
+            let itemPrice = Math.round(item.price);
 
             htmlString +=
             `
@@ -597,7 +598,7 @@ class View{
                             </div>
                             <!-- detail -->
                             <div class="row p-0 h-50 justify-content-between">
-                                <p class="col-6 info">$${item.price.toLocaleString()}</p>
+                                <p class="col-6 info">$${itemPrice.toLocaleString()}</p>
                                 <p class="col-6 text-orange info">${effectString}</p>
                             </div>
                         </section>
