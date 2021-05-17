@@ -322,7 +322,7 @@ class Control{
     }
 
     static getPurchasePrice(price, count){
-        return price * count;
+        return Math.round(price * count);
     }
 
     static setDescriptionEvent(User, item){
