@@ -2,6 +2,7 @@ const config = {
     topPage: document.getElementById("top-page"),
     sidePage: document.getElementById("side-page"),
     eventData: [],
+    interval: null,
 };
 
 class Item{
@@ -308,7 +309,7 @@ class Control{
     }
 
     static setTimeInterval(User){
-        setInterval(function(){
+        config.interval = setInterval(function(){
             User.increaseDays();
 
             // 各itemの効果を出す
@@ -417,6 +418,7 @@ class Control{
             // 表示画面はメニュー選択に戻る
             User.setUserData();
 
+            clearInterval(config.interval);
             Control.displayMainPage(User);
             Control.setTimeInterval(User);
         })
