@@ -33,11 +33,13 @@ $ cd recursion-clicker-empire-game/
  
 ## Anything Else
  
-以下のレビューを受けて、User classにデフォルト値を設定しました。
-レビューありがとうございました！
+以下のレビューを受けて、User classにデフォルト値を設定しました。また、タイマー処理も見直しました。
+レビューありがとうございました！！
  
 ***Review Comment:***
 ![Review Comment](https://raw.github.com/wiki/moritanuki/recursion-clicker-empire/images/review_comment.png)
+
+![Review Comment](https://raw.github.com/wiki/moritanuki/recursion-clicker-empire/images/review_comment2.PNG)
 
 ## Author
  
