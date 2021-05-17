@@ -624,7 +624,7 @@ class View{
             <section class="mb-4">
                 <p class="fs-2">${item.name}</p>
                 <p class="fs-5"><small class="text-gray">Max Purchses:</small> ${maxCountString}</p>
-                <p class="fs-5 price"><small class="text-gray">Price:</small> $${item.price.toLocaleString()}</p>
+                <p class="fs-5 price"><small class="text-gray">Price:</small> $${Math.round(item.price).toLocaleString()}</p>
                 <p class="fs-6">${item.description}</p>
             </section>
 
