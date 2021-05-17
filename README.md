@@ -31,6 +31,14 @@ $ git clone https://github.com/moritanuki/recursion-clicker-empire.git
 $ cd recursion-clicker-empire-game/
 ```
  
+## Anything Else
+ 
+以下のレビューを受けて、User classにデフォルト値を設定しました。
+レビューありがとうございました！
+ 
+***Review Comment:***
+![Review Comment](https://raw.github.com/wiki/moritanuki/recursion-clicker-empire/images/review_comment.png)
+
 ## Author
  
 [@moritanuki_](https://twitter.com/moritanuki_)
