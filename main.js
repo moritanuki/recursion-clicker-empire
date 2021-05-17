@@ -287,7 +287,7 @@ class Control{
         let userAge = userInfo.querySelector("#user-age");
         let userDays = userInfo.querySelector("#user-days");
 
-        userMoney.innerHTML = `$${User.money.toLocaleString()}`;
+        userMoney.innerHTML = `$${Math.round(User.money).toLocaleString()}`;
         userAge.innerHTML = 
         `${User.age} <small class="text-gray">yrs old</small>`;
         userDays.innerHTML = 
@@ -380,7 +380,7 @@ class Control{
                     Control.rewriteUserInfo(User);
                 }
                 else{
-                    let shortage = (purchasePrice - User.money).toLocaleString();
+                    let shortage = Math.ronud(purchasePrice - User.money).toLocaleString();
     
                     alert(`${User.name} is $${shortage} short on cash.`);
                 }
