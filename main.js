@@ -322,7 +322,7 @@ class Control{
     }
 
     static getPurchasePrice(price, count){
-        return Math.round(price * count);
+        return price * count;
     }
 
     static setDescriptionEvent(User, item){
@@ -380,7 +380,7 @@ class Control{
                     Control.rewriteUserInfo(User);
                 }
                 else{
-                    let shortage = Math.ronud(purchasePrice - User.money).toLocaleString();
+                    let shortage = purchasePrice - User.money.toLocaleString();
     
                     alert(`${User.name} is $${shortage} short on cash.`);
                 }
