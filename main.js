@@ -538,13 +538,14 @@ class View{
     // -------------------------
 
     static createUserInfo(User){
+        let userMoney = Math.round(User.money);
         let htmlString = 
         `
         <section class="col-lg-9 col-12">
             <p class="fs-3">${User.name}
                 <small class="fs-5 text-gray">'s money</small>
             </p>
-            <p id="user-money" class="fs-1 border-bottom text-end">$${User.money.toLocaleString()}</p>
+            <p id="user-money" class="fs-1 border-bottom text-end">$${userMoney.toLocaleString()}</p>
         </section>
 
         <section class="col-lg-3 col-12 text-end row p-0 m-0">
