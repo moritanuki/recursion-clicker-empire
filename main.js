@@ -51,17 +51,22 @@ class Item{
 }
 
 class User{
-    constructor(name, age, days, money, burger, purchasedItems){
+    constructor(name, age, days, money, burger, purchasedItems = null){
         this.name = name;
         this.age = age;
         this.days = days;
         this.money = money;
         this.burger = burger;
-        this.purchasedItems = purchasedItems;
+        if(purchasedItems !== null){
+            this.purchasedItems = purchasedItems;
+        }
+        else{
+            this.purchasedItems = this.initializedItems();
+        }
     }
 
     // 初期値設定
-    static initializedItems(){
+    initializedItems(){
 
         const initialItems = {
             "Flip Machine": new Item(
@@ -239,7 +244,7 @@ class Control{
                 let userName = config.sidePage.querySelector("input").value;
                 if(userName){
                     // User初期設定
-                    let user = new User(userName, 20, 0, 5e4, 0, User.initializedItems());
+                    let user = new User(userName, 20, 0, 5e4, 0);
                     Control.displayMainPage(user);
                     Control.setTimeInterval(user);
                 }
