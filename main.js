@@ -416,11 +416,13 @@ class Control{
         let redoBtn = config.sidePage.querySelector("#redo");
         redoBtn.addEventListener("click", function(){
             // 表示画面はメニュー選択に戻る
-            User.setUserData();
+            if(config.eventData.length != 0){
+                User.setUserData();
 
-            clearInterval(config.interval);
-            Control.displayMainPage(User);
-            Control.setTimeInterval(User);
+                clearInterval(config.interval);
+                Control.displayMainPage(User);
+                Control.setTimeInterval(User);
+            }
         })
 
         burger.addEventListener(("click"), function(){
