@@ -154,7 +154,7 @@ class User{
 
     increaseDays(){
         this.days++;
-        if(this.days % 356 == 0) this.age++;
+        if(this.days % 365 == 0) this.age++;
     }
 
     calculateMoney(amount, operator){
